@@ -25,7 +25,9 @@ where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-pythonpath = ["src"]
+# "." keeps `import tests` working when CI runs the pytest script.
+# `python -m pytest` puts the cwd on sys.path; the console script does not.
+pythonpath = [".", "src"]
 addopts = "-q"
 
 [tool.ruff]
