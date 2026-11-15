@@ -1,0 +1,27 @@
+# Secrets and local credentials. .env.example is the only committed env file.
+.env*
+!.env.example
+*.pem
+keys/
+state/
+logs/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+.coverage
+htmlcov/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
